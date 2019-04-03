@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/sidebar_style.css">
+</head>
+
+<body>
+
+<div>
+    <div>
+        <h2>Inject scripts</h2>
+        <div>
+            <input id="addScriptBtn" type="button" value="Add script">
+        </div>
+        <table id="scriptsTable">
+            <colgroup>
+                <col class="url-col">
+                <col class="actions-col">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Url</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <!--<div>
+        <h2>Inject components</h2>
+        <div>
+            <label for="htmlComponentCode">Component code</label>
+            <textarea id="htmlComponentCode"></textarea>
+            <input id="addComponentBtn" type="button" value="Add">
+        </div>
+        <h3>Components to be injected</h3>
+        <table id="ComponentsTable">
+            <thead>
+                <tr>
+                    <th>Artifact id</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>-->
+    <div class="foot-bar">
+        <input type="button" id="finishBtn" value="Finish">
+    </div>
+</div>
+<script src="lib/cubx_injector_sidebar.js"></script>
+</body>
+</html>
