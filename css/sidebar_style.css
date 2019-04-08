@@ -9,3 +9,9 @@
 .foot-bar {
     padding-top: 1em;
 }
+
+.hidden {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+ }
