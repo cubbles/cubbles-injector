@@ -1,0 +1,27 @@
+{
+  "scripts": [
+    {
+      "verbose": "https://cubbles.world/shared/cubx.core.rte@3.0.0/webcomponents/custom-elements-es5-adapter.js",
+      "code": "<script type=\"text/javascript\" src=\"https://cubbles.world/shared/cubx.core.rte@3.0.0/webcomponents/custom-elements-es5-adapter.js\"></script>",
+      "type": "script"
+    },
+    {
+      "verbose": "https://cubbles.world/shared/cubx.core.rte@3.0.0/webcomponents/webcomponents-lite.js",
+      "code": "<script type=\"text/javascript\" src=\"https://cubbles.world/shared/cubx.core.rte@3.0.0/webcomponents/webcomponents-lite.js\"></script>",
+      "type": "script"
+    },
+    {
+      "verbose": "https://cubbles.world/shared/cubx.core.rte@3.0.0/crc-loader/js/main.js",
+      "code": "<script type=\"text/javascript\" data-cubx-startevent=\"cubblesInjectionReady\" src=\"https://cubbles.world/shared/cubx.core.rte@3.0.0/crc-loader/js/main.js\" data-crcinit-loadcif=\"true\"></script>",
+      "type": "script"
+    }
+  ],
+  "components": [
+    {
+      "verbose": "com.incowia.basic-html-components@2.0.0-SNAPSHOT\\cubx-textarea",
+      "code": "<cubx-textarea cubx-webpackage-id=\"com.incowia.basic-html-components@2.0.0-SNAPSHOT\">\n  <cubx-core-init style=\"display:none\">\n      <cubx-core-slot-init slot=\"value\">\"Value of textarea\"</cubx-core-slot-init>\n      <cubx-core-slot-init slot=\"label\">\"Label\"</cubx-core-slot-init>\n  </cubx-core-init>\n</cubx-textarea>",
+      "type": "component",
+      "containerSelector": "#about"
+    }
+  ]
+}
