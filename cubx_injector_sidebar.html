@@ -11,12 +11,18 @@
 
   <body>
     <div id="mainContainer">
+      <h2>Save/Load config using local storage</h2>
       <div>
         <input id="saveConfigBtn" type="button" value="Save Config" />
-        <input id="loadConfigBtn" type="button" value="Load Config" />
-        <input id="importConfigBtn" type="file" accept=".json">
-        <input id="exportConfigBtn" type="button" value="Export Config" />        
+        <input id="loadConfigBtn" type="button" value="Load Config" />  
       </div>
+      <h2>Import/Export config from/to a file</h2>
+      <div>
+          <label for="importConfigBtn">Import Config:</label>
+          <input id="importConfigBtn" type="file" accept=".json">
+          <input id="exportConfigBtn" type="button" value="Export Config" />      
+      </div>
+      <hr>
       <h2>Scripts to be injected</h2>
       <div>
         <input id="addScriptBtn" type="button" value="Add script" />
