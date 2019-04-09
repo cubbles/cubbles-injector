@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="css/sidebar_style.css" />
-    <link
-      rel="stylesheet"
-      href="./vendor/codemirror-5.45.0/lib/codemirror.css"
-    />
+    <link rel="stylesheet" href="./vendor/codemirror-5.45.0/lib/codemirror.css" />
     <script src="./vendor/codemirror-5.45.0/lib/codemirror.js"></script>
     <script src="./vendor/codemirror-5.45.0/mode/xml/xml.js"></script>
   </head>
 
   <body>
     <div id="mainContainer">
+      <div>
+        <input id="saveConfigBtn" type="button" value="Save Config" />
+        <input id="loadConfigBtn" type="button" value="Load Config" />
+      </div>
       <h2>Scripts to be injected</h2>
       <div>
         <input id="addScriptBtn" type="button" value="Add script" />
@@ -33,7 +34,7 @@
       <div>
         <h2>Components to be injected</h2>
         <div>
-            <input id="addComponentBtn" type="button" value="Add Component" />
+          <input id="addComponentBtn" type="button" value="Add Component" />
         </div>
         <table id="componentsTable">
           <thead>
@@ -51,17 +52,10 @@
     </div>
     <div id="codeEditorDiv" class="hidden">
       <label for="htmlComponentCode">Component code</label>
-      <textarea id="htmlComponentCode">
-          &lt;cubx-textarea cubx-webpackage-id="com.incowia.basic-html-components@2.0.0-SNAPSHOT" id="sourceTA"&gt;
-              &lt;cubx-core-init style="display:none"&gt;
-                  &lt;cubx-core-slot-init slot="value"&gt;"Value of the source textarea"&lt;/cubx-core-slot-init&gt;
-                  &lt;cubx-core-slot-init slot="label"&gt;"Source textarea"&lt;/cubx-core-slot-init&gt;
-              &lt;/cubx-core-init&gt;
-          &lt;/cubx-textarea&gt;
-      </textarea>
+      <textarea id="htmlComponentCode"></textarea>
       <div id="componentsFields" class="hidden">
         <label for="containerSelectorInput">Container selector</label>
-        <input id="containerSelectorInput">
+        <input id="containerSelectorInput" />
       </div>
       <input id="editorAddButton" type="button" value="Add" />
     </div>
