@@ -1,17 +1,40 @@
 .action-btn {
-    width: 5em;    
+  width: 5em;
 }
 
-.url-input, .url-col {
-    width: 98%;
+.label-col {
+  width: 80%;
+}
+
+.actions-col {
+  width: 20%;
 }
 
 .foot-bar {
-    padding-top: 1em;
+  padding-top: 1em;
 }
 
 .hidden {
-    position: absolute !important;
-    top: -9999px !important;
-    left: -9999px !important;
- }
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table th {
+    border-bottom: 1px solid #f2f2f2
+}
+
+[data-script-code],
+[data-component-code] {
+  word-wrap: break-word;
+}
