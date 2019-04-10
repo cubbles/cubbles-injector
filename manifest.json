@@ -15,5 +15,6 @@
       ],
       "persistent": false
    },
+   "web_accessible_resources" : ["vendor/simmer/simmer.js"],
    "devtools_page": "cubx_injector_devtools.html"
   }
