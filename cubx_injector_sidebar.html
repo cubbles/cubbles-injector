@@ -15,15 +15,15 @@
       <h2>Save/Load config using local storage</h2>
       <div>
         <input id="saveConfigBtn" type="button" value="Save Config" />
-        <input id="loadConfigBtn" type="button" value="Load Config" />  
+        <input id="loadConfigBtn" type="button" value="Load Config" />
       </div>
       <h2>Import/Export config from/to a file</h2>
       <div>
-          <label for="importConfigBtn">Import Config:</label>
-          <input id="importConfigBtn" type="file" accept=".json">
-          <input id="exportConfigBtn" type="button" value="Export Config" />      
+        <label for="importConfigBtn">Import Config:</label>
+        <input id="importConfigBtn" type="file" accept=".json" />
+        <input id="exportConfigBtn" type="button" value="Export Config" />
       </div>
-      <hr>
+      <hr />
       <h2>Scripts to be injected</h2>
       <div>
         <input id="addScriptBtn" type="button" value="Add script" />
@@ -35,25 +35,25 @@
         </colgroup>
         <thead>
           <tr>
-            <th>Src</th>
+            <th>Name</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody></tbody>
       </table>
       <div>
-        <h2>Components to be injected</h2>
+        <h2>HTML Snippets to be injected</h2>
         <div>
-          <input id="addComponentBtn" type="button" value="Add Component" />
+          <input id="addSnippetBtn" type="button" value="Add Snippet" />
         </div>
-        <table id="componentsTable">
+        <table id="snippetsTable">
           <colgroup>
             <col class="label-col" />
             <col class="actions-col" />
           </colgroup>
           <thead>
             <tr>
-              <th>webpackageId/artifactId</th>
+              <th>Name</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -66,9 +66,15 @@
       </div>
     </div>
     <div id="codeEditorDiv" class="hidden">
-      <label for="htmlComponentCode">Component code</label>
-      <textarea id="htmlComponentCode"></textarea>
-      <div id="componentsFields" class="hidden">
+      <div>
+          <label for="htmlSnippetName">Name</label>
+          <input id="htmlSnippetName" />
+      </div>
+      <div>
+          <label for="htmlSnippetCode">Code</label>
+          <textarea id="htmlSnippetCode"></textarea>
+      </div>
+      <div id="snippetsFields" class="hidden">
         <label for="containerSelectorInput">Container selector</label>
         <input id="containerSelectorInput" />
         <input id="useInspectedElementBtn" type="button" value="Use inspected element" />

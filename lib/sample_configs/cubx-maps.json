@@ -1,27 +1,15 @@
 {
   "scripts": [
-    {
-      "verbose": "https://cubbles.world/shared/cubx.core.rte@3.0.0/webcomponents/custom-elements-es5-adapter.js",
-      "code": "<script type=\"text/javascript\" src=\"https://cubbles.world/shared/cubx.core.rte@3.0.0/webcomponents/custom-elements-es5-adapter.js\"></script>",
-      "type": "script"
-    },
-    {
-      "verbose": "https://cubbles.world/shared/cubx.core.rte@3.0.0/webcomponents/webcomponents-lite.js",
-      "code": "<script type=\"text/javascript\" src=\"https://cubbles.world/shared/cubx.core.rte@3.0.0/webcomponents/webcomponents-lite.js\"></script>",
-      "type": "script"
-    },
-    {
-      "verbose": "https://cubbles.world/shared/cubx.core.rte@3.0.0/crc-loader/js/main.js",
-      "code": "<script type=\"text/javascript\" data-cubx-startevent=\"cubblesInjectionReady\" src=\"https://cubbles.world/shared/cubx.core.rte@3.0.0/crc-loader/js/main.js\" data-crcinit-loadcif=\"true\"></script>",
-      "type": "script"
-    }
+   {
+    "name": "RTE scripts",
+    "code": "<script type=\"text/javascript\" src=\"https://cubbles.world/shared/cubx.core.rte@3.0.0/webcomponents/custom-elements-es5-adapter.js\"></script>\n<script type=\"text/javascript\" src=\"https://cubbles.world/shared/cubx.core.rte@3.0.0/webcomponents/webcomponents-lite.js\"></script>\n<script type=\"text/javascript\" data-cubx-startevent=\"cubblesInjectionReady\" src=\"https://cubbles.world/shared/cubx.core.rte@3.0.0/crc-loader/js/main.js\" data-crcinit-loadcif=\"true\"></script>"
+   }
   ],
-  "components": [
-    {
-      "verbose": "cubx-maps@1.0.0-SNAPSHOT\\cubx-maps",
-      "code": "<cubx-maps cubx-webpackage-id=\"cubx-maps@1.0.0-SNAPSHOT\" style=\"height: 300px\">\n    <cubx-core-init style=\"display: none\">\n        <cubx-core-slot-init slot=\"mapInitOptions\">{\"center\": [51.505, -0.09], \"zoom\": 13}</cubx-core-slot-init>\n        <cubx-core-slot-init slot=\"tileLayer\">\n            {\n                \"url\": \"https://a.tile.openstreetmap.org/{z}/{x}/{y}.png\",\n                \"leafLetOptions\": {\n                    \"attribution\": \"Map data &copy; &lt;a href=\\\"https://www.openstreetmap.org/\\\"&gt;OpenStreetMap&lt;/a&gt; contributors, &lt;a href=\\\"https://creativecommons.org/licenses/by-sa/2.0/\\\"&gt;CC-BY-SA&lt;/a&gt;\",\n                    \"maxZoom\": 18\n                }\n            }\n        </cubx-core-slot-init>\n        <cubx-core-slot-init slot=\"markers\">{\n                \"list\": [\n                    {\"latlng\": [51.5, -0.09], \"popUpInnerHtml\": \"&lt;b&gt;Fixed&lt;/b&gt; Marker\", \"leafLetOptions\": {\"title\": \"Fixed Marker\"}},\n                    {\"latlng\": [51.51, -0.091], \"leafLetOptions\": {\"title\": \"Draggable Marker\", \"draggable\": true}}\n                ]\n            }\n        </cubx-core-slot-init>\n        <cubx-core-slot-init slot=\"circles\">{\n                \"list\": [\n                    {\"latlng\": [51.508, -0.11], \"popUpInnerHtml\": \"Red &lt;b&gt;circle&lt;/b&gt;\", \"leafLetOptions\": { \"color\": \"red\", \"fillColor\": \"#f03\", \"fillOpacity\": 0.5, \"radius\": 500 }}\n                ]\n            }\n        </cubx-core-slot-init>\n        <cubx-core-slot-init slot=\"polygons\">{\n                \"list\": [\n                    {\"latlngs\": [ [51.509, -0.08], [51.503, -0.06], [51.51, -0.047] ], \"popUpInnerHtml\": \"A &lt;b&gt;polygon&lt;/b&gt;\"}\n                ]\n            }\n        </cubx-core-slot-init>\n        <cubx-core-slot-init slot=\"polylines\">{\n                \"list\": [\n                    {\"latlngs\": [ [51.5, -0.09], [51.51, -0.091] ], \"popUpInnerHtml\": \"A &lt;b&gt;polyline&lt;/b&gt;\"}\n                ]\n            }\n        </cubx-core-slot-init>\n        <cubx-core-slot-init slot=\"rectangles\">{\n                \"list\": [\n                    {\"bounds\": [ [51.505, -0.13], [51.498, -0.14] ], \"popUpInnerHtml\": \"A &lt;b&gt;rectangle&lt;/b&gt;\", \"leafLetOptions\": { \"color\": \"#ff7800\", \"weight\": 1 }}\n                ]\n            }\n        </cubx-core-slot-init>\n    </cubx-core-init>\n</cubx-maps>",
-      "type": "component",
-      "containerSelector": "#about"
-    }
+  "snippets": [
+   {
+    "name": "cubx-maps",
+    "code": "<cubx-maps cubx-webpackage-id=\"cubx-maps@1.0.0-SNAPSHOT\" style=\"height: 300px\">\n    <cubx-core-init style=\"display: none\">\n        <cubx-core-slot-init slot=\"mapInitOptions\">{\"center\": [51.505, -0.09], \"zoom\": 13}</cubx-core-slot-init>\n        <cubx-core-slot-init slot=\"tileLayer\">\n            {\n                \"url\": \"https://a.tile.openstreetmap.org/{z}/{x}/{y}.png\",\n                \"leafLetOptions\": {\n                    \"attribution\": \"Map data &copy; &lt;a href=\\\"https://www.openstreetmap.org/\\\"&gt;OpenStreetMap&lt;/a&gt; contributors, &lt;a href=\\\"https://creativecommons.org/licenses/by-sa/2.0/\\\"&gt;CC-BY-SA&lt;/a&gt;\",\n                    \"maxZoom\": 18\n                }\n            }\n        </cubx-core-slot-init>\n        <cubx-core-slot-init slot=\"markers\">{\n                \"list\": [\n                    {\"latlng\": [51.5, -0.09], \"popUpInnerHtml\": \"&lt;b&gt;Fixed&lt;/b&gt; Marker\", \"leafLetOptions\": {\"title\": \"Fixed Marker\"}},\n                    {\"latlng\": [51.51, -0.091], \"leafLetOptions\": {\"title\": \"Draggable Marker\", \"draggable\": true}}\n                ]\n            }\n        </cubx-core-slot-init>\n        <cubx-core-slot-init slot=\"circles\">{\n                \"list\": [\n                    {\"latlng\": [51.508, -0.11], \"popUpInnerHtml\": \"Red &lt;b&gt;circle&lt;/b&gt;\", \"leafLetOptions\": { \"color\": \"red\", \"fillColor\": \"#f03\", \"fillOpacity\": 0.5, \"radius\": 500 }}\n                ]\n            }\n        </cubx-core-slot-init>\n        <cubx-core-slot-init slot=\"polygons\">{\n                \"list\": [\n                    {\"latlngs\": [ [51.509, -0.08], [51.503, -0.06], [51.51, -0.047] ], \"popUpInnerHtml\": \"A &lt;b&gt;polygon&lt;/b&gt;\"}\n                ]\n            }\n        </cubx-core-slot-init>\n        <cubx-core-slot-init slot=\"polylines\">{\n                \"list\": [\n                    {\"latlngs\": [ [51.5, -0.09], [51.51, -0.091] ], \"popUpInnerHtml\": \"A &lt;b&gt;polyline&lt;/b&gt;\"}\n                ]\n            }\n        </cubx-core-slot-init>\n        <cubx-core-slot-init slot=\"rectangles\">{\n                \"list\": [\n                    {\"bounds\": [ [51.505, -0.13], [51.498, -0.14] ], \"popUpInnerHtml\": \"A &lt;b&gt;rectangle&lt;/b&gt;\", \"leafLetOptions\": { \"color\": \"#ff7800\", \"weight\": 1 }}\n                ]\n            }\n        </cubx-core-slot-init>\n    </cubx-core-init>\n</cubx-maps>",
+    "containerSelector": "#about"
+   }
   ]
-}
+ }
