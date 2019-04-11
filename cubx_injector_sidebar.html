@@ -12,19 +12,20 @@
 
   <body>
     <div id="mainContainer">
-      <h2>Save/Load config using local storage</h2>
-      <div>
+      <h3>Load/Save config</h3>
+      <div class="button-bar">
+          <label>Use a external file:</label>
+          <input id="importConfigHiddenBtn" type="file" accept=".json" class="hidden"/>
+          <input id="importConfigBtn" type="button" value="Import Config" />
+          <input id="exportConfigBtn" type="button" value="Export Config" />
+      </div>
+      <div class="button-bar">
+        <label>Use browser storage:</label>
         <input id="saveConfigBtn" type="button" value="Save Config" />
         <input id="loadConfigBtn" type="button" value="Load Config" />
       </div>
-      <h2>Import/Export config from/to a file</h2>
-      <div>
-        <input id="importConfigHiddenBtn" type="file" accept=".json" class="hidden"/>
-        <input id="importConfigBtn" type="button" value="Import Config" />
-        <input id="exportConfigBtn" type="button" value="Export Config" />
-      </div>
       <hr />
-      <h2>Scripts to be injected</h2>
+      <h3>Scripts to be injected</h3>
       <div>
         <input id="addScriptBtn" type="button" value="Add script" />
       </div>
@@ -42,7 +43,7 @@
         <tbody></tbody>
       </table>
       <div>
-        <h2>HTML Snippets to be injected</h2>
+        <h3>HTML Snippets to be injected</h3>
         <div>
           <input id="addSnippetBtn" type="button" value="Add Snippet" />
         </div>

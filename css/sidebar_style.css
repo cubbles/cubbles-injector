@@ -41,3 +41,7 @@ div.actions-container {
 [data-code] {
   word-wrap: break-word;
 }
+
+.button-bar {
+  padding-bottom: 5px;
+}
