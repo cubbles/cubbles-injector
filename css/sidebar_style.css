@@ -3,11 +3,11 @@
 }
 
 .label-col {
-  width: 70%;
+  width: 80%;
 }
 
 .actions-col {
-  width: 30%;
+  width: 20%;
 }
 
 .foot-bar {
@@ -44,4 +44,12 @@ div.actions-container {
 
 .button-bar {
   padding-bottom: 5px;
+}
+
+.CodeMirror {
+  height: 200px !important;
+}
+
+body {
+  padding: 5px;
 }

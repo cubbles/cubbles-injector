@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="css/sidebar_style.css" />
     <link rel="stylesheet" href="./vendor/codemirror-5.45.0/lib/codemirror.css" />
+    <link rel="stylesheet" href="./vendor/bootstrap-4.3.1-dist/bootstrap.min.css" />
+    <link rel="stylesheet" href="./vendor/fontawesome-free-5.8.1-web/css/all.min.css" />
     <script src="./vendor/codemirror-5.45.0/lib/codemirror.js"></script>
     <script src="./vendor/codemirror-5.45.0/mode/xml/xml.js"></script>
     <script src="./vendor/FileSaver.js-2.0.0/FileSaver.min.js"></script>
@@ -12,22 +14,36 @@
 
   <body>
     <div id="mainContainer">
-      <h3>Load/Save config</h3>
-      <div class="button-bar">
-          <label>Use a external file:</label>
-          <input id="importConfigHiddenBtn" type="file" accept=".json" class="hidden"/>
-          <input id="importConfigBtn" type="button" value="Import Config" />
-          <input id="exportConfigBtn" type="button" value="Export Config" />
+      <h5>Load/Save config</h5>
+      <div>
+        <label>Use a external file:</label>
+        <div class="btn-group btn-group-sm">
+          <input id="importConfigHiddenBtn" type="file" accept=".json" class="hidden" />
+          <button id="exportConfigBtn" type="button" class="btn btn-sm btn-light">
+            <i class="fas fa-download"></i> Export
+          </button>
+          <button id="importConfigBtn" type="button" value="Import Config" class="btn btn-sm btn-light">
+            <i class="fas fa-upload"></i> Import
+          </button>
+        </div>
       </div>
-      <div class="button-bar">
+      <div>
         <label>Use browser storage:</label>
-        <input id="saveConfigBtn" type="button" value="Save Config" />
-        <input id="loadConfigBtn" type="button" value="Load Config" />
+        <div class="btn-group btn-group-sm">
+          <button id="saveConfigBtn" type="button" class="btn btn-sm btn-light">
+              <i class="fas fa-arrow-alt-circle-down"></i> Save
+          </button>
+          <button id="loadConfigBtn" type="button" class="btn btn-sm btn-light">
+              <i class="fas fa-arrow-alt-circle-right"></i> Load
+          </button>
+        </div>
       </div>
       <hr />
-      <h3>Scripts to be injected</h3>
+      <h5>Scripts to be injected</h5>
       <div>
-        <input id="addScriptBtn" type="button" value="Add script" />
+        <button id="addScriptBtn" type="button" class="btn btn-sm btn-light">
+            <i class="fas fa-plus-circle"></i> Add script
+        </button>
       </div>
       <table id="scriptsTable">
         <colgroup>
@@ -43,9 +59,11 @@
         <tbody></tbody>
       </table>
       <div>
-        <h3>HTML Snippets to be injected</h3>
+        <h5>HTML Snippets to be injected</h5>
         <div>
-          <input id="addSnippetBtn" type="button" value="Add Snippet" />
+          <button id="addSnippetBtn" type="button" class="btn btn-sm btn-light">
+              <i class="fas fa-plus-circle"></i> Add Snippet
+          </button>
         </div>
         <table id="snippetsTable">
           <colgroup>
@@ -62,26 +80,34 @@
         </table>
       </div>
       <div class="foot-bar">
-        <input type="button" id="finishBtn" value="Finish" />
-        <input type="button" id="resetBtn" value="Reset" />
+        <button id="finishBtn" type="button" class="btn btn-sm btn-primary">Finish</button>
+        <button id="resetBtn" type="button" class="btn btn-sm btn-secondary">Reset</button>
       </div>
     </div>
     <div id="codeEditorDiv" class="hidden">
       <div>
-          <label for="htmlSnippetName">Name</label>
-          <input id="htmlSnippetName" />
+        <label for="htmlSnippetName">Name</label>
+        <input id="htmlSnippetName" class="form-control form-control-sm" />
       </div>
       <div>
-          <label for="htmlSnippetCode">Code</label>
-          <textarea id="htmlSnippetCode"></textarea>
+        <label for="htmlSnippetCode">Code</label>
+        <textarea id="htmlSnippetCode"></textarea>
       </div>
-      <div id="snippetsFields" class="hidden">
+      <div id="snippetsFields" class="hidden form-group">
         <label for="containerSelectorInput">Container selector</label>
-        <input id="containerSelectorInput" />
-        <input id="useInspectedElementBtn" type="button" value="Use inspected element" />
+        <div class="input-group">
+          <input id="containerSelectorInput" class="form-control form-control-sm"/>
+          <div class="input-group-append">
+            <button id="useInspectedElementBtn" type="button" class="btn btn-sm btn-light">
+                Use inspected element
+            </button>
+          </div>
+        </div>
       </div>
-      <input id="editorAddButton" type="button" value="Done" />
-      <input id="editorCancelButton" type="button" value="Cancel" />
+      <div class="form-group">
+        <button id="editorAddButton" type="button" class="btn btn-sm btn-primary">Done</button>
+        <button id="editorCancelButton" type="button" class="btn btn-sm btn-secondary">Cancel</button>
+      </div>
     </div>
     <script src="lib/cubx_injector_sidebar.js"></script>
   </body>
