@@ -1,7 +1,7 @@
 {
     "name": "cubbles-injector",
     "version": "0.1",
-    "description": "Extension to add Cubbles components to the inspected page dynamically",
+    "description": "Devtools extension to inject HTML Snippets and Scripts to a website",
     "manifest_version": 2,
     "permissions":[
       "tabs",
