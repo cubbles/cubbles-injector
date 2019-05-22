@@ -22,7 +22,12 @@
           <button id="exportConfigBtn" type="button" class="btn btn-sm btn-light">
             <i class="fas fa-download"></i> Export
           </button>
-          <button id="importConfigBtn" type="button" value="Import Config" class="btn btn-sm btn-light">
+          <button
+            id="importConfigBtn"
+            type="button"
+            value="Import Config"
+            class="btn btn-sm btn-light"
+          >
             <i class="fas fa-upload"></i> Import
           </button>
         </div>
@@ -31,10 +36,10 @@
         <label>Use browser storage:</label>
         <div class="btn-group btn-group-sm">
           <button id="saveConfigBtn" type="button" class="btn btn-sm btn-light">
-              <i class="fas fa-arrow-alt-circle-down"></i> Save
+            <i class="fas fa-arrow-alt-circle-down"></i> Save
           </button>
           <button id="loadConfigBtn" type="button" class="btn btn-sm btn-light">
-              <i class="fas fa-arrow-alt-circle-right"></i> Load
+            <i class="fas fa-arrow-alt-circle-right"></i> Load
           </button>
         </div>
       </div>
@@ -42,7 +47,7 @@
       <h5>Scripts to be injected</h5>
       <div>
         <button id="addScriptBtn" type="button" class="btn btn-sm btn-light">
-            <i class="fas fa-plus-circle"></i> Add script
+          <i class="fas fa-plus-circle"></i> Add script
         </button>
       </div>
       <table id="scriptsTable">
@@ -62,7 +67,7 @@
         <h5>HTML Snippets to be injected</h5>
         <div>
           <button id="addSnippetBtn" type="button" class="btn btn-sm btn-light">
-              <i class="fas fa-plus-circle"></i> Add Snippet
+            <i class="fas fa-plus-circle"></i> Add Snippet
           </button>
         </div>
         <table id="snippetsTable">
@@ -95,20 +100,80 @@
       </div>
       <div id="snippetsFields" class="hidden">
         <div class="form-group">
-          <label for="containerSelectorInput">Container selector</label>
+          <label for="containerSelectorInput">Target element selector</label>
           <div class="input-group">
-            <input id="containerSelectorInput" class="form-control form-control-sm"/>
             <div class="input-group-append">
               <button id="useInspectedElementBtn" type="button" class="btn btn-sm btn-light">
-                  Use inspected element
+                Use inspected element
               </button>
+            </div>
+            <input id="containerSelectorInput" class="form-control form-control-sm" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="containerSelectorInput">Where would you like to inject the snippet?</label>
+          <div>
+            <div>
+              <span>As child of target  at the: </span>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="whereToInsertRB"
+                  id="end"
+                  value="end"
+                  checked="true"
+                />
+                <label class="form-check-label" for="end">End</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="whereToInsertRB"
+                  id="beginning"
+                  value="beginning"
+                />
+                <label class="form-check-label" for="beginning"
+                  >Beginning</label
+                >
+              </div>
+            </div>
+            <div>
+              <span>As sibling of target node: </span>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="whereToInsertRB"
+                  id="beforeSelected"
+                  value="beforeSelected"
+                />
+                <label class="form-check-label" for="beforeSelected"
+                  >Before</label
+                >
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="whereToInsertRB"
+                  id="afterSelected"
+                  value="afterSelected"
+                />
+                <label class="form-check-label" for="afterSelected"
+                  >After</label
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="form-group">
         <button id="editorAddButton" type="button" class="btn btn-sm btn-primary">Done</button>
-        <button id="editorCancelButton" type="button" class="btn btn-sm btn-secondary">Cancel</button>
+        <button id="editorCancelButton" type="button" class="btn btn-sm btn-secondary">
+          Cancel
+        </button>
       </div>
     </div>
     <script src="lib/cubx_injector_sidebar.js"></script>
