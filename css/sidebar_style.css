@@ -53,3 +53,7 @@ div.actions-container {
 body {
   padding: 5px;
 }
+
+#snippetsContainer {
+  padding-top: 2.5em;
+}
