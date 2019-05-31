@@ -1,6 +1,6 @@
 {
     "name": "cubbles-injector",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "Devtools extension to inject HTML Snippets and Scripts to a website",
     "manifest_version": 2,
     "permissions":[
